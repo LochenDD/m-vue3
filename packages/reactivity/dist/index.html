@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="./reactivity.global.js"></script>
+    <script>
+        const target = {
+            name: 'zs', age: 19, address: {
+                city: '上海'
+            }
+        }
+        const { reactive, effect } = VueReactivity
+        const p = reactive(target)
+        // 先执行一次 之后依赖的响应式值每次更改会执行
+        effect(() => {
+            p.age = Math.random()
+            document.querySelector('#app').innerHTML = `${p.name}, ${p.age}`
+        })
+        setTimeout(() => {
+            p.age++
+        }, 1000)
+    </script>
+</body>
+
+</html>
