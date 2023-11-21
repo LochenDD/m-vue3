@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      vue:
+        specifier: ^3.3.8
+        version: nexus3.bilibili.co/vue@3.3.8(typescript@4.6.2)
     devDependencies:
       esbuild:
         specifier: 0.14.27
@@ -18,7 +22,162 @@ importers:
         specifier: 4.6.2
         version: nexus3.bilibili.co/typescript@4.6.2
 
+  packages/reactivity: {}
+
+  packages/shared: {}
+
 packages:
+
+  nexus3.bilibili.co/@babel/helper-string-parser@7.22.5:
+    resolution: {integrity: sha512-mM4COjgZox8U+JcXQwPijIZLElkgEpO5rsERVDJTc2qfCDfERyob6k5WegS14SX18IIjv+XD+GrqNumY5JRCDw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@babel/helper-string-parser/-/helper-string-parser-7.22.5.tgz}
+    name: '@babel/helper-string-parser'
+    version: 7.22.5
+    engines: {node: '>=6.9.0'}
+    dev: false
+
+  nexus3.bilibili.co/@babel/helper-validator-identifier@7.22.20:
+    resolution: {integrity: sha512-Y4OZ+ytlatR8AI+8KZfKuL5urKp7qey08ha31L8b3BwewJAoJamTzyvxPR/5D+KkdJCGPq/+8TukHBlY10FX9A==, tarball: https://nexus3.bilibili.co/repository/npm-public/@babel/helper-validator-identifier/-/helper-validator-identifier-7.22.20.tgz}
+    name: '@babel/helper-validator-identifier'
+    version: 7.22.20
+    engines: {node: '>=6.9.0'}
+    dev: false
+
+  nexus3.bilibili.co/@babel/parser@7.23.4:
+    resolution: {integrity: sha512-vf3Xna6UEprW+7t6EtOmFpHNAuxw3xqPZghy+brsnusscJRW5BMUzzHZc5ICjULee81WeUV2jjakG09MDglJXQ==, tarball: https://nexus3.bilibili.co/repository/npm-public/@babel/parser/-/parser-7.23.4.tgz}
+    name: '@babel/parser'
+    version: 7.23.4
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+    dependencies:
+      '@babel/types': nexus3.bilibili.co/@babel/types@7.23.3
+    dev: false
+
+  nexus3.bilibili.co/@babel/types@7.23.3:
+    resolution: {integrity: sha512-OZnvoH2l8PK5eUvEcUyCt/sXgr/h+UWpVuBbOljwcrAgUl6lpchoQ++PHGyQy1AtYnVA6CEq3y5xeEI10brpXw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@babel/types/-/types-7.23.3.tgz}
+    name: '@babel/types'
+    version: 7.23.3
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-string-parser': nexus3.bilibili.co/@babel/helper-string-parser@7.22.5
+      '@babel/helper-validator-identifier': nexus3.bilibili.co/@babel/helper-validator-identifier@7.22.20
+      to-fast-properties: nexus3.bilibili.co/to-fast-properties@2.0.0
+    dev: false
+
+  nexus3.bilibili.co/@jridgewell/sourcemap-codec@1.4.15:
+    resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==, tarball: https://nexus3.bilibili.co/repository/npm-public/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz}
+    name: '@jridgewell/sourcemap-codec'
+    version: 1.4.15
+    dev: false
+
+  nexus3.bilibili.co/@vue/compiler-core@3.3.8:
+    resolution: {integrity: sha512-hN/NNBUECw8SusQvDSqqcVv6gWq8L6iAktUR0UF3vGu2OhzRqcOiAno0FmBJWwxhYEXRlQJT5XnoKsVq1WZx4g==, tarball: https://nexus3.bilibili.co/repository/npm-public/@vue/compiler-core/-/compiler-core-3.3.8.tgz}
+    name: '@vue/compiler-core'
+    version: 3.3.8
+    dependencies:
+      '@babel/parser': nexus3.bilibili.co/@babel/parser@7.23.4
+      '@vue/shared': nexus3.bilibili.co/@vue/shared@3.3.8
+      estree-walker: nexus3.bilibili.co/estree-walker@2.0.2
+      source-map-js: nexus3.bilibili.co/source-map-js@1.0.2
+    dev: false
+
+  nexus3.bilibili.co/@vue/compiler-dom@3.3.8:
+    resolution: {integrity: sha512-+PPtv+p/nWDd0AvJu3w8HS0RIm/C6VGBIRe24b9hSyNWOAPEUosFZ5diwawwP8ip5sJ8n0Pe87TNNNHnvjs0FQ==, tarball: https://nexus3.bilibili.co/repository/npm-public/@vue/compiler-dom/-/compiler-dom-3.3.8.tgz}
+    name: '@vue/compiler-dom'
+    version: 3.3.8
+    dependencies:
+      '@vue/compiler-core': nexus3.bilibili.co/@vue/compiler-core@3.3.8
+      '@vue/shared': nexus3.bilibili.co/@vue/shared@3.3.8
+    dev: false
+
+  nexus3.bilibili.co/@vue/compiler-sfc@3.3.8:
+    resolution: {integrity: sha512-WMzbUrlTjfYF8joyT84HfwwXo+8WPALuPxhy+BZ6R4Aafls+jDBnSz8PDz60uFhuqFbl3HxRfxvDzrUf3THwpA==, tarball: https://nexus3.bilibili.co/repository/npm-public/@vue/compiler-sfc/-/compiler-sfc-3.3.8.tgz}
+    name: '@vue/compiler-sfc'
+    version: 3.3.8
+    dependencies:
+      '@babel/parser': nexus3.bilibili.co/@babel/parser@7.23.4
+      '@vue/compiler-core': nexus3.bilibili.co/@vue/compiler-core@3.3.8
+      '@vue/compiler-dom': nexus3.bilibili.co/@vue/compiler-dom@3.3.8
+      '@vue/compiler-ssr': nexus3.bilibili.co/@vue/compiler-ssr@3.3.8
+      '@vue/reactivity-transform': nexus3.bilibili.co/@vue/reactivity-transform@3.3.8
+      '@vue/shared': nexus3.bilibili.co/@vue/shared@3.3.8
+      estree-walker: nexus3.bilibili.co/estree-walker@2.0.2
+      magic-string: nexus3.bilibili.co/magic-string@0.30.5
+      postcss: nexus3.bilibili.co/postcss@8.4.31
+      source-map-js: nexus3.bilibili.co/source-map-js@1.0.2
+    dev: false
+
+  nexus3.bilibili.co/@vue/compiler-ssr@3.3.8:
+    resolution: {integrity: sha512-hXCqQL/15kMVDBuoBYpUnSYT8doDNwsjvm3jTefnXr+ytn294ySnT8NlsFHmTgKNjwpuFy7XVV8yTeLtNl/P6w==, tarball: https://nexus3.bilibili.co/repository/npm-public/@vue/compiler-ssr/-/compiler-ssr-3.3.8.tgz}
+    name: '@vue/compiler-ssr'
+    version: 3.3.8
+    dependencies:
+      '@vue/compiler-dom': nexus3.bilibili.co/@vue/compiler-dom@3.3.8
+      '@vue/shared': nexus3.bilibili.co/@vue/shared@3.3.8
+    dev: false
+
+  nexus3.bilibili.co/@vue/reactivity-transform@3.3.8:
+    resolution: {integrity: sha512-49CvBzmZNtcHua0XJ7GdGifM8GOXoUMOX4dD40Y5DxI3R8OUhMlvf2nvgUAcPxaXiV5MQQ1Nwy09ADpnLQUqRw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@vue/reactivity-transform/-/reactivity-transform-3.3.8.tgz}
+    name: '@vue/reactivity-transform'
+    version: 3.3.8
+    dependencies:
+      '@babel/parser': nexus3.bilibili.co/@babel/parser@7.23.4
+      '@vue/compiler-core': nexus3.bilibili.co/@vue/compiler-core@3.3.8
+      '@vue/shared': nexus3.bilibili.co/@vue/shared@3.3.8
+      estree-walker: nexus3.bilibili.co/estree-walker@2.0.2
+      magic-string: nexus3.bilibili.co/magic-string@0.30.5
+    dev: false
+
+  nexus3.bilibili.co/@vue/reactivity@3.3.8:
+    resolution: {integrity: sha512-ctLWitmFBu6mtddPyOKpHg8+5ahouoTCRtmAHZAXmolDtuZXfjL2T3OJ6DL6ezBPQB1SmMnpzjiWjCiMYmpIuw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@vue/reactivity/-/reactivity-3.3.8.tgz}
+    name: '@vue/reactivity'
+    version: 3.3.8
+    dependencies:
+      '@vue/shared': nexus3.bilibili.co/@vue/shared@3.3.8
+    dev: false
+
+  nexus3.bilibili.co/@vue/runtime-core@3.3.8:
+    resolution: {integrity: sha512-qurzOlb6q26KWQ/8IShHkMDOuJkQnQcTIp1sdP4I9MbCf9FJeGVRXJFr2mF+6bXh/3Zjr9TDgURXrsCr9bfjUw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@vue/runtime-core/-/runtime-core-3.3.8.tgz}
+    name: '@vue/runtime-core'
+    version: 3.3.8
+    dependencies:
+      '@vue/reactivity': nexus3.bilibili.co/@vue/reactivity@3.3.8
+      '@vue/shared': nexus3.bilibili.co/@vue/shared@3.3.8
+    dev: false
+
+  nexus3.bilibili.co/@vue/runtime-dom@3.3.8:
+    resolution: {integrity: sha512-Noy5yM5UIf9UeFoowBVgghyGGPIDPy1Qlqt0yVsUdAVbqI8eeMSsTqBtauaEoT2UFXUk5S64aWVNJN4MJ2vRdA==, tarball: https://nexus3.bilibili.co/repository/npm-public/@vue/runtime-dom/-/runtime-dom-3.3.8.tgz}
+    name: '@vue/runtime-dom'
+    version: 3.3.8
+    dependencies:
+      '@vue/runtime-core': nexus3.bilibili.co/@vue/runtime-core@3.3.8
+      '@vue/shared': nexus3.bilibili.co/@vue/shared@3.3.8
+      csstype: nexus3.bilibili.co/csstype@3.1.2
+    dev: false
+
+  nexus3.bilibili.co/@vue/server-renderer@3.3.8(vue@3.3.8):
+    resolution: {integrity: sha512-zVCUw7RFskvPuNlPn/8xISbrf0zTWsTSdYTsUTN1ERGGZGVnRxM2QZ3x1OR32+vwkkCm0IW6HmJ49IsPm7ilLg==, tarball: https://nexus3.bilibili.co/repository/npm-public/@vue/server-renderer/-/server-renderer-3.3.8.tgz}
+    id: nexus3.bilibili.co/@vue/server-renderer/3.3.8
+    name: '@vue/server-renderer'
+    version: 3.3.8
+    peerDependencies:
+      vue: 3.3.8
+    dependencies:
+      '@vue/compiler-ssr': nexus3.bilibili.co/@vue/compiler-ssr@3.3.8
+      '@vue/shared': nexus3.bilibili.co/@vue/shared@3.3.8
+      vue: nexus3.bilibili.co/vue@3.3.8(typescript@4.6.2)
+    dev: false
+
+  nexus3.bilibili.co/@vue/shared@3.3.8:
+    resolution: {integrity: sha512-8PGwybFwM4x8pcfgqEQFy70NaQxASvOC5DJwLQfpArw1UDfUXrJkdxD3BhVTMS+0Lef/TU7YO0Jvr0jJY8T+mw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@vue/shared/-/shared-3.3.8.tgz}
+    name: '@vue/shared'
+    version: 3.3.8
+    dev: false
+
+  nexus3.bilibili.co/csstype@3.1.2:
+    resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==, tarball: https://nexus3.bilibili.co/repository/npm-public/csstype/-/csstype-3.1.2.tgz}
+    name: csstype
+    version: 3.1.2
+    dev: false
 
   nexus3.bilibili.co/esbuild@0.14.27:
     resolution: {integrity: sha512-MZQt5SywZS3hA9fXnMhR22dv0oPGh6QtjJRIYbgL1AeqAoQZE+Qn5ppGYQAoHv/vq827flj4tIJ79Mrdiwk46Q==, tarball: https://nexus3.bilibili.co/repository/npm-public/esbuild/-/esbuild-0.14.27.tgz}
@@ -50,11 +209,65 @@ packages:
       esbuild-windows-arm64: registry.npmmirror.com/esbuild-windows-arm64@0.14.27
     dev: true
 
+  nexus3.bilibili.co/estree-walker@2.0.2:
+    resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==, tarball: https://nexus3.bilibili.co/repository/npm-public/estree-walker/-/estree-walker-2.0.2.tgz}
+    name: estree-walker
+    version: 2.0.2
+    dev: false
+
+  nexus3.bilibili.co/magic-string@0.30.5:
+    resolution: {integrity: sha512-7xlpfBaQaP/T6Vh8MO/EqXSW5En6INHEvEXQiuff7Gku0PWjU3uf6w/j9o7O+SpB5fOAkrI5HeoNgwjEO0pFsA==, tarball: https://nexus3.bilibili.co/repository/npm-public/magic-string/-/magic-string-0.30.5.tgz}
+    name: magic-string
+    version: 0.30.5
+    engines: {node: '>=12'}
+    dependencies:
+      '@jridgewell/sourcemap-codec': nexus3.bilibili.co/@jridgewell/sourcemap-codec@1.4.15
+    dev: false
+
   nexus3.bilibili.co/minimist@1.2.5:
     resolution: {integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==, tarball: https://nexus3.bilibili.co/repository/npm-public/minimist/-/minimist-1.2.5.tgz}
     name: minimist
     version: 1.2.5
     dev: true
+
+  nexus3.bilibili.co/nanoid@3.3.7:
+    resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==, tarball: https://nexus3.bilibili.co/repository/npm-public/nanoid/-/nanoid-3.3.7.tgz}
+    name: nanoid
+    version: 3.3.7
+    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+    dev: false
+
+  nexus3.bilibili.co/picocolors@1.0.0:
+    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==, tarball: https://nexus3.bilibili.co/repository/npm-public/picocolors/-/picocolors-1.0.0.tgz}
+    name: picocolors
+    version: 1.0.0
+    dev: false
+
+  nexus3.bilibili.co/postcss@8.4.31:
+    resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==, tarball: https://nexus3.bilibili.co/repository/npm-public/postcss/-/postcss-8.4.31.tgz}
+    name: postcss
+    version: 8.4.31
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: nexus3.bilibili.co/nanoid@3.3.7
+      picocolors: nexus3.bilibili.co/picocolors@1.0.0
+      source-map-js: nexus3.bilibili.co/source-map-js@1.0.2
+    dev: false
+
+  nexus3.bilibili.co/source-map-js@1.0.2:
+    resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==, tarball: https://nexus3.bilibili.co/repository/npm-public/source-map-js/-/source-map-js-1.0.2.tgz}
+    name: source-map-js
+    version: 1.0.2
+    engines: {node: '>=0.10.0'}
+    dev: false
+
+  nexus3.bilibili.co/to-fast-properties@2.0.0:
+    resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==, tarball: https://nexus3.bilibili.co/repository/npm-public/to-fast-properties/-/to-fast-properties-2.0.0.tgz}
+    name: to-fast-properties
+    version: 2.0.0
+    engines: {node: '>=4'}
+    dev: false
 
   nexus3.bilibili.co/typescript@4.6.2:
     resolution: {integrity: sha512-HM/hFigTBHZhLXshn9sN37H085+hQGeJHJ/X7LpBWLID/fbc2acUMfU+lGD98X81sKP+pFa9f0DZmCwB9GnbAg==, tarball: https://nexus3.bilibili.co/repository/npm-public/typescript/-/typescript-4.6.2.tgz}
@@ -62,7 +275,25 @@ packages:
     version: 4.6.2
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: true
+
+  nexus3.bilibili.co/vue@3.3.8(typescript@4.6.2):
+    resolution: {integrity: sha512-5VSX/3DabBikOXMsxzlW8JyfeLKlG9mzqnWgLQLty88vdZL7ZJgrdgBOmrArwxiLtmS+lNNpPcBYqrhE6TQW5w==, tarball: https://nexus3.bilibili.co/repository/npm-public/vue/-/vue-3.3.8.tgz}
+    id: nexus3.bilibili.co/vue/3.3.8
+    name: vue
+    version: 3.3.8
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/compiler-dom': nexus3.bilibili.co/@vue/compiler-dom@3.3.8
+      '@vue/compiler-sfc': nexus3.bilibili.co/@vue/compiler-sfc@3.3.8
+      '@vue/runtime-dom': nexus3.bilibili.co/@vue/runtime-dom@3.3.8
+      '@vue/server-renderer': nexus3.bilibili.co/@vue/server-renderer@3.3.8(vue@3.3.8)
+      '@vue/shared': nexus3.bilibili.co/@vue/shared@3.3.8
+      typescript: nexus3.bilibili.co/typescript@4.6.2
+    dev: false
 
   registry.npmmirror.com/esbuild-android-64@0.14.27:
     resolution: {integrity: sha512-LuEd4uPuj/16Y8j6kqy3Z2E9vNY9logfq8Tq+oTE2PZVuNs3M1kj5Qd4O95ee66yDGb3isaOCV7sOLDwtMfGaQ==, tarball: https://registry.npmmirror.com/esbuild-android-64/-/esbuild-android-64-0.14.27.tgz}

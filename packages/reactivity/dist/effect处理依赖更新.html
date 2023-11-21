@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="./reactivity.global.js"></script>
+    <script>
+        const { reactive, effect } = VueReactivity
+        const state = reactive({ flag: true, name: 'jw', age: 30 })
+        effect(() => {
+            console.log('render')
+            document.body.innerText = state.flag ? state.name : state.age
+        })
+        setTimeout(() => {
+            state.flag = false
+            setTimeout(() => {
+                console.log('修改name, 原则上不更新')
+                state.name = 'zf'
+            }, 1000)
+        }, 1000)
+    </script>
+</body>
+
+</html>
